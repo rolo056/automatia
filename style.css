@@ -1,0 +1,43 @@
+/* Ligero a proposito: sin fuentes externas, sin librerias, sin peticiones a
+   terceros. La pagina de un negocio que vende webs rapidas tiene que serlo. */
+:root{
+  --ink:#16202e; --soft:#4a5768; --muted:#6f7c8d;
+  --paper:#ffffff; --wash:#f5f7fa; --line:#dfe5ec; --accent:#1c4e80;
+}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--paper);-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.bar{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;padding:18px 0}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.2px;color:var(--ink);text-decoration:none}
+.brand span{color:var(--accent)}
+nav{margin-left:auto;display:flex;flex-wrap:wrap;gap:18px}
+nav a{color:var(--soft);text-decoration:none;font-size:14px}
+nav a:hover,nav a:focus{color:var(--accent);text-decoration:underline}
+h1{font-size:28px;line-height:1.25;letter-spacing:-.4px;margin:34px 0 10px}
+h2{font-size:20px;letter-spacing:-.2px;margin:34px 0 10px;padding-top:6px}
+h3{font-size:16px;margin:22px 0 6px}
+p,li{color:var(--soft)}
+.lede{font-size:18px;color:var(--ink)}
+a{color:var(--accent)}
+.card{background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:18px 0}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.svc{border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.svc h3{margin-top:0}
+.svc p{margin:0;font-size:15px}
+dl{margin:0}
+dt{font-weight:600;color:var(--ink);margin-top:14px}
+dd{margin:2px 0 0;color:var(--soft)}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:14px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding:22px 0 40px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(prefers-color-scheme:dark){
+  :root{--ink:#e8edf4;--soft:#b6c0cd;--muted:#8b97a6;--paper:#111823;
+        --wash:#182231;--line:#2a3648;--accent:#7fb0e6}
+}
