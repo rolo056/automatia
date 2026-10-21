@@ -3,105 +3,336 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Automatia Agency — Email infrastructure, automation and fast websites</title>
-<meta name="description" content="Independent software studio run by Alexander Rosales in Plattsburgh, New York. Cold email infrastructure, workflow automation, data extraction and fast, lightweight websites for small businesses.">
+<title>Cold email deliverability and done-for-you campaigns | Automatia Agency</title>
+<meta name="description" content="When cold email lands in spam, the copy is rarely the problem. Check your sending domain free, get a written deliverability audit, or have your campaigns run for you from domains in your name.">
+<link rel="canonical" href="https://automatia-agency.com/">
+<link rel="alternate" hreflang="en" href="https://automatia-agency.com/">
+<link rel="alternate" hreflang="es" href="https://automatia-agency.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://automatia-agency.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://automatia-agency.com/">
+<meta property="og:title" content="Stop rewriting the email. Check the envelope.">
+<meta property="og:description" content="Check your sending domain in 10 seconds. Deliverability audits, cold email setup, and campaigns run for you.">
+<meta property="og:image" content="https://automatia-agency.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Automatia Agency",
+ "url":"https://automatia-agency.com/","email":"alexander@automatia-agency.com",
+ "description":"Cold email deliverability audits, cold email infrastructure setup and done-for-you outbound campaigns.",
+ "founder":{"@type":"Person","name":"Alexander Rosales"},
+ "address":{"@type":"PostalAddress","streetAddress":"32 Adirondack Lane","addressLocality":"Plattsburgh","addressRegion":"NY","postalCode":"12901","addressCountry":"US"},
+ "areaServed":"Worldwide","knowsLanguage":["en","es"]}
+</script>
 </head>
-<body>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap"><div class="bar">
   <a class="brand" href="/">Automatia<span>&nbsp;Agency</span></a>
-  <nav>
-    <a href="/#services">Services</a>
-    <a href="/#pricing">Pricing</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/refunds.html">Refunds</a>
+  <nav aria-label="Main">
+    <a href="#check">Check a domain</a>
+    <a href="#done">Done for you</a>
+    <a href="#measured">Results</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <a class="lang" href="/es/" hreflang="es" lang="es">Español</a>
 </div></div></header>
 
-<main class="wrap">
+<main id="main">
 
-<h1>Software that removes repeated work from small businesses</h1>
-<p class="lede">Automatia Agency is an independent software studio operated by Alexander Rosales in
-Plattsburgh, New York. I build email infrastructure, workflow automation and fast websites for
-small businesses and independent professionals, and I work with the client directly rather than
-through account managers.</p>
+<section class="hero" id="check" aria-labelledby="hero-title">
+  <div class="wrap">
+    <span class="eyebrow">Cold email deliverability</span>
+    <h1 id="hero-title">Stop rewriting the email. <span class="grad">Check the envelope.</span></h1>
+    <p class="intro">When cold email lands in spam, the copy is rarely the problem. It's the domains,
+    the inboxes and the list. I find which one, in writing.</p>
+    <a class="hero-alt" href="#done">Rather have it all done for you? See how &rsaquo;</a>
 
-<h2 id="services">Services</h2>
-<div class="grid">
-  <div class="svc">
-    <h3>Email infrastructure and outreach systems</h3>
-    <p>Sending platforms, sequenced follow up with automatic reply detection, unified inboxes,
-    bounce handling, address verification, and domain authentication with SPF, DKIM and DMARC
-    correctly aligned.</p>
+    <div class="checker">
+      <form id="check-form" novalidate>
+        <label class="check-label" for="domain">Your sending domain</label>
+        <div class="check-row">
+          <input id="domain" name="domain" type="text" inputmode="url" autocomplete="off"
+                 spellcheck="false" placeholder="yourcompany.com" aria-describedby="check-note">
+          <button class="btn" id="check-btn" type="submit">Check it free</button>
+        </div>
+        <p class="check-note" id="check-note">Reads your public DNS right in your browser. Nothing is stored, and nothing reaches me unless you send it.</p>
+      </form>
+      <div class="result" id="result" aria-live="polite"></div>
+    </div>
   </div>
-  <div class="svc">
-    <h3>Workflow automation and integrations</h3>
-    <p>Connecting systems that do not talk to each other: APIs, webhooks, scheduled jobs,
-    reconciliation between platforms, and removing manual re-entry of data that is already
-    digital.</p>
+</section>
+
+<section class="gray center" id="done" aria-labelledby="done-title">
+  <div class="wrap">
+    <span class="eyebrow">Done for you</span>
+    <h2 class="title" id="done-title">Or skip all of it. I'll run your outbound.</h2>
+    <p class="intro">Your domains, my platform and my hours. You approve the message, I do the rest,
+    and you watch it happen in your own dashboard.</p>
+
+    <div class="split">
+      <div class="side reveal">
+        <span class="who">You</span>
+        <h3>Approve and answer.</h3>
+        <ul>
+          <li>Approve the offer and every email before it goes out</li>
+          <li>Answer the replies that matter, from your dashboard</li>
+          <li>Own every domain and inbox, in your name</li>
+        </ul>
+      </div>
+      <div class="side me reveal">
+        <span class="who">Me</span>
+        <h3>Everything else.</h3>
+        <ul>
+          <li>Set up and warm the domains and inboxes</li>
+          <li>Research and verify every contact</li>
+          <li>Write one checked line for each prospect</li>
+          <li>Send, monitor, and stop the day the numbers say so</li>
+          <li>Separate human replies from auto-replies, and report every week</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dash reveal" role="img" aria-label="Example of the client dashboard with sample data: campaign totals, a list of replies with labels, and a reply box with file attachments.">
+      <div class="dash-top" aria-hidden="true"><i></i><i></i><i></i><span>Client dashboard &middot; sample data</span></div>
+      <div class="dash-body" aria-hidden="true">
+        <div class="dash-left">
+          <div class="dash-kpis">
+            <div class="kpi"><b>1,240</b><span>Sent</span></div>
+            <div class="kpi"><b>1.3%</b><span>Bounced</span></div>
+            <div class="kpi"><b>18</b><span>Human replies</span></div>
+            <div class="kpi"><b>5</b><span>Interested</span></div>
+          </div>
+          <ul class="inbox">
+            <li class="sel"><b>Owner, physical therapy clinic</b><span class="rubber pass">Interested</span><p>Sounds good. Send me the analysis and we can talk next week.</p></li>
+            <li><b>Marketing lead, law firm</b><span class="rubber ink">Question</span><p>How much would this cost for two locations?</p></li>
+            <li><b>Office manager, dental group</b><span class="rubber warn">Not now</span><p>Not this quarter. Try us again in January.</p></li>
+            <li><b>Founder, HVAC company</b><span class="rubber info">Unsubscribe</span><p>Please take me off your list.</p></li>
+          </ul>
+        </div>
+        <div class="dash-right">
+          <div class="bubble"><small>Owner, physical therapy clinic &middot; 10:42</small>Sounds good. Send me the analysis and we can talk next week.</div>
+          <div class="compose">Write a reply&hellip;
+            <div class="compose-row"><span class="clip">Attach files</span><span class="send">Send</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="dash-cap">Your client dashboard: every reply in one place, answered from there. Sample data.</p>
+
+    <ol class="rules">
+      <li class="reveal"><b>Your domains, never mine</b><span>If we part ways, everything stays with you.</span></li>
+      <li class="reveal"><b>One checked line per contact</b><span>Every detail is verified on the prospect's own site before it's sent.</span></li>
+      <li class="reveal"><b>Human replies only</b><span>Auto-replies never count in your numbers.</span></li>
+      <li class="reveal"><b>A stop rule before the first email</b><span>Written down: what would make us pause or end a campaign.</span></li>
+      <li class="reveal"><b>Replies in your dashboard</b><span>Read and answer them there, attachments included.</span></li>
+    </ol>
   </div>
-  <div class="svc">
-    <h3>Websites and landing pages</h3>
-    <p>Hand written, lightweight pages built for speed on mobile connections. Existing sites
-    rebuilt at a fraction of their original weight, with the same content and functionality.</p>
+</section>
+
+<section class="center" id="measured" aria-labelledby="measured-title">
+  <div class="wrap">
+    <span class="eyebrow">Measured, not claimed</span>
+    <h2 class="title" id="measured-title">Every number here comes from real sends.</h2>
+    <p class="intro">The sample size sits under each one. Some are small. All of them are real.</p>
+    <div class="bento">
+      <article class="tile full gray-tile reveal">
+        <div class="big">4 asked for next steps.</div>
+        <p>An SEO agency's outreach to local businesses: 989 emails, a 1.4% bounce rate and 15 human
+        replies. Four of them asked for a price, a proposal or an analysis, and the agency answered from
+        its dashboard.</p>
+        <div class="n">Client campaign, September to October 2026</div>
+      </article>
+      <article class="tile wide gray-tile reveal">
+        <div class="big">21.5% <small>vs</small> 19.0%</div>
+        <p>Inbox placement with a team's own copy against a neutral version, from the same domains on
+        the same day. Rewriting the email changed nothing.</p>
+        <div class="n">Seed-inbox tests, October 2026</div>
+      </article>
+      <article class="tile narrow black reveal">
+        <div class="big"><span class="grad">Pixel on.</span></div>
+        <p>Microsoft 365 and Proofpoint flagged the email only with the open-tracking pixel on.
+        Off, both let it through.</p>
+        <div class="n">Seed-inbox tests, October 2026</div>
+      </article>
+      <article class="tile narrow gray-tile reveal">
+        <div class="big">4&times;</div>
+        <p>Catch-all addresses bounced at 4.19%, verified ones at 1.09%. Catch-alls stay out of my
+        lists.</p>
+        <div class="n">838 sends, my own campaigns</div>
+      </article>
+      <article class="tile wide gray-tile reveal">
+        <div class="big">7% <small>vs</small> 1.7%</div>
+        <p>Reply rate of 100 hand-researched contacts against a bulk list of 2,071. Four times the
+        rate with a twentieth of the volume.</p>
+        <div class="n">2,171 contacts, my own campaigns</div>
+      </article>
+    </div>
+    <p class="confession reveal"><b>And one I got wrong.</b> My tool once reported 101 replies on a
+    campaign. Only 46 came from a person. My reports count human replies only now.</p>
   </div>
-  <div class="svc">
-    <h3>Data extraction and processing</h3>
-    <p>Turning documents, spreadsheets and public records into structured data, including
-    cleaning, deduplication, enrichment and delivery in the format your software will accept.</p>
+</section>
+
+<section class="gray" id="case" aria-labelledby="case-title">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Case file &middot; client anonymized</span>
+      <h2 class="title" id="case-title">67 domains that kept dying.</h2>
+      <p class="intro">A B2B team kept replacing sending domains every few months and couldn't say
+      why. Replies had fallen from 4&ndash;6% to under 2%.</p>
+    </div>
+    <div class="case">
+      <ol class="timeline reveal">
+        <li><span class="d">October 2025 to February 2026</span><p>Main campaigns reply at 4.1% to 5.7%.</p></li>
+        <li><span class="d">April 15 to 28</span><p>Bounces reach 4.23%, with two daily spikes. Replies still at 2.93%.</p></li>
+        <li><span class="d">May 1 to 14</span><p>Replies fall to 0.44%, two weeks after the bounce spike.</p></li>
+        <li><span class="d">May 22</span><p>Same copy, same leads, same day: new inboxes reply at 2.90%, old ones at 1.71%.</p></li>
+        <li><span class="d">October</span><p>103 domains deleted, 45 more scheduled. Gmail placement on the newest batch drops from 20/20 to 7/21.</p></li>
+      </ol>
+      <div class="reveal">
+        <ul class="findings">
+          <li><b>Domains wear out in about 2 to 3 months</b><span class="rubber ink">Confirmed</span></li>
+          <li><b>Complaints and bounces are what wear them out</b><span class="rubber warn">Strong evidence</span></li>
+          <li><b>Outlook, Yahoo and AOL filter it with any copy</b><span class="rubber ink">Confirmed</span></li>
+          <li><b>The tracking pixel alone triggers Microsoft 365 and Proofpoint</b><span class="rubber ink">Confirmed</span></li>
+        </ul>
+        <div class="deliverable">
+          <p>Delivered as a six-page written report: every finding rated by how sure I am, seven fixes
+          the team could make that week at no cost, and a measured plan for the rest.</p>
+          <a class="btn btn-ghost" href="#contact">Ask for the sample report</a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<h2 id="pricing">How pricing works</h2>
-<p>Every engagement is quoted in writing before any work starts. There are two ways to work
-together, and the client chooses which one applies.</p>
-<table>
-  <tr><th>Model</th><th>Rate</th><th>When it applies</th></tr>
-  <tr>
-    <td>Fixed price project</td>
-    <td>Quoted per project, typically USD 100 to USD 1,500</td>
-    <td>The scope can be defined in advance. The price does not change unless the client changes
-    the scope in writing.</td>
-  </tr>
-  <tr>
-    <td>Hourly</td>
-    <td>USD 20 to USD 35 per hour</td>
-    <td>Ongoing work, maintenance, or work whose scope cannot be fixed in advance. Hours worked
-    are reported to the client.</td>
-  </tr>
-</table>
-<p class="small">Prices are quoted and invoiced in United States dollars. Payment is accepted
-through the freelancing platform on which the engagement was agreed, or by bank transfer. No work
-begins before the client has approved the written quote.</p>
+<section class="dark center" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="title" id="how-title">No discovery call. Just the answer.</h2>
+    <p class="intro">Four steps, all of them in writing.</p>
+    <ol class="steps">
+      <li class="reveal"><h3>Send the domain</h3><p>Run the check above, or send me the domain you use.</p></li>
+      <li class="reveal"><h3>Get a written answer</h3><p>The first thing I'd fix, within one business day. Free.</p></li>
+      <li class="reveal"><h3>Approve a quote</h3><p>Scope and price in writing. Nothing starts before you say yes.</p></li>
+      <li class="reveal"><h3>Go live</h3><p>The report and change log, or your first campaign, sent after you approve it.</p></li>
+    </ol>
+    <p class="statement reveal">In English or Spanish. <span>And you keep a record of every decision.</span></p>
+  </div>
+</section>
 
-<h2>Work</h2>
-<p>Recent work includes a multi mailbox cold email platform with sequencing, automatic reply
-detection, bounce control and a live client reporting panel, currently operating for a client in
-Spain, and several hand built business websites, including rebuilds that reduced page weight from
-366 KB to 36 KB, 248 KB to 39 KB and 118 KB to 25 KB with no loss of content or functionality.</p>
-<p class="small">Examples of completed websites are available on request. Client names and project
-details are not published without the written permission of the client.</p>
+<section class="gray center" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <span class="eyebrow">Pricing</span>
+    <h2 class="title" id="pricing-title">Three ways to work together.</h2>
+    <p class="intro">Every engagement starts with a written quote. The price doesn't move unless you
+    change the scope.</p>
+    <div class="plans">
+      <article class="plan reveal">
+        <span class="kind">Fix it</span>
+        <h3>Deliverability audit</h3>
+        <div class="price">From <b>$350</b></div>
+        <p>Your sending domains checked from the outside, tested in real inboxes, and the exact fixes in writing.</p>
+        <ul>
+          <li>SPF, DKIM, DMARC, MX and blocklists</li>
+          <li>Placement test at Gmail, Outlook and Yahoo</li>
+          <li>Up to 5 domains; larger setups quoted</li>
+        </ul>
+      </article>
+      <article class="plan featured reveal">
+        <span class="kind">Run it</span>
+        <h3>Done for you</h3>
+        <div class="price">From <b>$1,200</b> per month, plus $750 setup</div>
+        <p>Your outbound, run end to end from domains in your name, with replies in your dashboard.</p>
+        <ul>
+          <li>Domains and inboxes set up and warmed</li>
+          <li>Researched, verified lists with one checked line each</li>
+          <li>Sending, monitoring and a written stop rule</li>
+          <li>Your dashboard and a weekly written report</li>
+        </ul>
+      </article>
+      <article class="plan reveal">
+        <span class="kind">Build it</span>
+        <h3>Setup for your team</h3>
+        <div class="price">From <b>$900</b></div>
+        <p>Infrastructure that doesn't burn your domains, handed off so your team can run it.</p>
+        <ul>
+          <li>Domains, inboxes, DNS and warm-up</li>
+          <li>Apollo, Instantly or Smartlead configured</li>
+          <li>A verified first list and written SOPs</li>
+        </ul>
+      </article>
+    </div>
+    <p class="agency-note reveal"><b>Domains, inboxes and data are billed at cost</b> and stay in your
+    name. <b>For agencies:</b> I also work behind the scenes, inside your clients' accounts and under
+    your brand.</p>
+  </div>
+</section>
 
-<h2 id="about">Business details</h2>
-<div class="card">
-<dl>
-  <dt>Trading name</dt><dd>Automatia Agency</dd>
-  <dt>Legal form</dt><dd>Sole proprietorship, operated by Alexander Rosales</dd>
-  <dt>Owner</dt><dd>Alexander Rosales</dd>
-  <dt>Business address</dt><dd>32 Adirondack Lane, Plattsburgh, NY 12901, United States</dd>
-  <dt>Email</dt><dd><a href="mailto:alexander@automatia-agency.com">alexander@automatia-agency.com</a></dd>
-  <dt>Business activity</dt><dd>Custom software development, systems integration and web
-  development services</dd>
-  <dt>Clients served</dt><dd>Small businesses and independent professionals, remotely, worldwide</dd>
-</dl>
-</div>
+<section class="center" id="refuse" aria-labelledby="refuse-title">
+  <div class="wrap">
+    <span class="eyebrow">Jobs I turn down</span>
+    <h2 class="title" id="refuse-title">What I say no to.</h2>
+    <p class="intro">So you know what you're getting before you write.</p>
+    <ul class="refuse">
+      <li class="reveal"><div><b>Commission-only work</b><span>I'm paid for the work, so my advice never depends on your close rate.</span></div></li>
+      <li class="reveal"><div><b>"Just send me booked meetings"</b><span>Meetings depend on the list, the offer and the timing. I fix what I can measure.</span></div></li>
+      <li class="reveal"><div><b>Bought lists nobody verified</b><span>Nothing I've measured burns domains faster than bounces.</span></div></li>
+      <li class="reveal"><div><b>Cold email from your main domain</b><span>If it gets flagged, your invoices and support mail go down with it.</span></div></li>
+      <li class="reveal"><div><b>A promised reply rate</b><span>I'll tell you what I'll measure instead, and when I'd stop sending.</span></div></li>
+      <li class="reveal"><div><b>Volume for its own sake</b><span>Researched lists replied at four times the rate of bulk ones.</span></div></li>
+    </ul>
+  </div>
+</section>
 
-<h2>Contact</h2>
-<p>Write to <a href="mailto:alexander@automatia-agency.com">alexander@automatia-agency.com</a> with
-a description of what you need. Enquiries are answered within one business day. Full contact
-details are on the <a href="/contact.html">contact page</a>.</p>
+<section class="gray" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="about center reveal">
+      <span class="eyebrow">Who you'd work with</span>
+      <h2 class="title" id="contact-title">One person. In writing.</h2>
+      <p>I'm Alexander Rosales. I run Automatia Agency on my own, from Plattsburgh, New York. I built
+      my own multi-inbox sending platform and my own email verification server, so the tests on this
+      page and your campaigns run on infrastructure I control. You deal with me directly, never an
+      account manager.</p>
+    </div>
+
+    <form class="form-card" id="contact-form" novalidate>
+      <p class="lead">Tell me what you need.</p>
+      <p class="sub">You'll get a written answer within one business day.</p>
+      <div class="fgrid">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" maxlength="100"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+        <div class="field"><label for="f-domain">Your sending domain</label><input id="f-domain" name="domain" inputmode="url" maxlength="200" placeholder="yourcompany.com"></div>
+        <div class="field"><label for="f-need">What do you need?</label>
+          <select id="f-need" name="need">
+            <option value="audit">A deliverability audit</option>
+            <option value="done">Campaigns done for me</option>
+            <option value="setup">Setup for my team</option>
+            <option value="other">Not sure yet</option>
+          </select></div>
+        <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="4000" required placeholder="What you send today, with what tool, and what's going wrong."></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <div class="form-foot">
+        <button class="btn" type="submit">Send</button>
+        <span class="f-status" id="f-status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="alt-mail">Prefer email? <a href="mailto:alexander@automatia-agency.com">alexander@automatia-agency.com</a></p>
+    </form>
+
+    <p class="legal-note">Automatia Agency is the trading name of the sole proprietorship of Alexander
+    Rosales, 32 Adirondack Lane, Plattsburgh, NY 12901, United States. Cold email infrastructure,
+    deliverability and outbound campaigns for small businesses and agencies, remotely, worldwide.
+    Projects are quoted in writing, typically USD 350 to USD 2,500, and done-for-you campaigns start at
+    USD 1,200 per month. Full details on the <a href="/contact.html">contact page</a>.</p>
+  </div>
+</section>
 
 </main>
 
@@ -111,8 +342,11 @@ details are on the <a href="/contact.html">contact page</a>.</p>
   <a href="/terms.html">Terms of Service</a> &middot;
   <a href="/privacy.html">Privacy Policy</a> &middot;
   <a href="/refunds.html">Refund and Cancellation Policy</a> &middot;
-  <a href="/contact.html">Contact</a></p>
+  <a href="/contact.html">Contact</a> &middot;
+  <a href="/es/" hreflang="es" lang="es">Español</a></p>
   <p>&copy; 2026 Alexander Rosales. All rights reserved.</p>
 </div></footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
