@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Are My Emails Going to Spam? Real Test Data | Automatia</title>
+<meta name="description" content="Why are your cold emails going to spam? The causes in the order a deliverability audit checks them, with measured numbers: worn-out domains, bounces, the tracking pixel and more.">
+<link rel="canonical" href="https://automatia-agency.com/why-emails-go-to-spam/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Automatia Agency">
+<meta property="og:url" content="https://automatia-agency.com/why-emails-go-to-spam/">
+<meta property="og:title" content="Why are my emails going to spam? Real test data">
+<meta property="og:description" content="It is rarely the copy. The causes in the order I check them, with the numbers I measured.">
+<meta property="og:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why are my emails going to spam? Real test data">
+<meta name="twitter:description" content="It is rarely the copy. The causes in the order I check them, with the numbers I measured.">
+<meta name="twitter:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Article","headline":"Why are my emails going to spam? Real test data",
+  "description":"The causes of cold email landing in spam, in the order a deliverability audit checks them, with measured numbers.",
+  "url":"https://automatia-agency.com/why-emails-go-to-spam/","image":"https://automatia-agency.com/assets/og.png",
+  "datePublished":"2026-10-26","dateModified":"2026-10-26","inLanguage":"en",
+  "author":{"@type":"Person","name":"Alexander Rosales","url":"https://automatia-agency.com/"},
+  "publisher":{"@type":"Organization","@id":"https://automatia-agency.com/#business","name":"Automatia Agency"}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://automatia-agency.com/"},
+  {"@type":"ListItem","position":2,"name":"Why emails go to spam","item":"https://automatia-agency.com/why-emails-go-to-spam/"}]}]}
+</script>
+<script data-goatcounter="https://stats.automatia-agency.com/count" async src="https://stats.automatia-agency.com/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><div class="bar">
+  <a class="brand" href="/">Automatia<span>&nbsp;Agency</span></a>
+  <nav aria-label="Main">
+    <a href="/email-deliverability-checker/">Free check</a>
+    <a href="/email-deliverability-audit/">Audit</a>
+    <a href="/cold-email-agency/">Done for you</a>
+    <a href="/why-emails-go-to-spam/" aria-current="page">Spam guide</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</div></div></header>
+
+<main id="main" class="wrap">
+<article class="guide">
+<p class="crumbs"><a href="/">Home</a> &rsaquo; Why emails go to spam</p>
+<h1>Why are my emails going to spam?</h1>
+<p class="small">By Alexander Rosales &middot; Updated 26 October 2026</p>
+
+<p class="lede">Short answer: in the audits I've run, it was almost never the words in the email. It was the
+domain, the inbox, the list or the tracking. Here are the causes in the order I check them, with the numbers I
+measured, and what to do about each one.</p>
+
+<h2>1. Your authentication is missing or doesn't line up</h2>
+<p>SPF, DKIM and DMARC tell Gmail and Microsoft that you are allowed to send from your domain. If one is missing,
+or if the domain they vouch for doesn't match the address in your From line, many inboxes treat the email as
+suspicious before reading a word of it.</p>
+<p>The mistakes I see most: two SPF records on the same domain (both stop working), SPF that needs more than 10
+DNS lookups, DKIM never switched on in the sending tool, and no DMARC record at all.</p>
+<p>You can check all four records in about ten seconds with the <a href="/email-deliverability-checker/">free
+deliverability checker</a>. But if everything passes, keep reading: in one audit, SPF, DKIM and DMARC passed on all
+67 sending domains, and the mail still went to spam.</p>
+
+<h2>2. Your sending domains are worn out</h2>
+<p class="stat">Sending domains lasted about 2 to 3 months before they started burning.</p>
+<p>That was the main finding of an audit for a B2B team with 67 active sending domains. On the newest batch, Gmail
+inbox placement fell from 20 of 20 seed inboxes in early October to 7 of 21 a few weeks later. Earlier in the year,
+the same copy sent to the same leads on the same day got a 2.90% reply rate from new inboxes and 1.71% from old
+ones.</p>
+<p>What to do: replace sending domains on a schedule, before replies collapse, and keep a few new ones warming in
+reserve so you never send from a tired domain because it's the only one you have.</p>
+
+<h2>3. Bounces are burning your reputation</h2>
+<p class="stat">Catch-all addresses bounced at 4.19%. Verified ones at 1.09%.</p>
+<p>That's from 838 of my own sends. A catch-all domain accepts any address when you verify it, so the checker says
+"maybe", and the real bounce arrives later. In the 67-domain audit, bounces reached 4.23% in the second half of
+April. Two weeks later, replies had fallen to 0.44%.</p>
+<p>What to do: verify every address before it goes into a campaign, keep catch-alls out or in a separate, small
+campaign, and pause any campaign whose bounce rate climbs past 2 to 3%.</p>
+
+<h2>4. The open-tracking pixel</h2>
+<p class="stat">Microsoft 365 and Proofpoint flagged the email only with the pixel on.</p>
+<p>In seed-inbox tests in October 2026, the same email passed both filters with open tracking off and was flagged
+with it on. The pixel is a tiny remote image with a tracking link, which is exactly what corporate filters are
+built to distrust, and many business buyers sit behind Microsoft 365 or Proofpoint.</p>
+<p>What to do: turn open tracking off for cold email and measure replies instead. Opens were never a reliable
+number anyway, since some filters open the email automatically before a person does.</p>
+
+<h2>5. Too much volume per inbox</h2>
+<p>Every inbox has a pace it can sustain. In the 67-domain audit, about 6 cold emails per inbox per day was a safe
+level for that setup. My own sending platform never goes above 30 per inbox per day, with a gap of several minutes
+between sends.</p>
+<p>What to do: add inboxes instead of pushing each one harder, and ramp new inboxes up slowly after warm-up.</p>
+
+<h2>6. A link or domain inside your email is on a blocklist</h2>
+<p>This one happened to me. My emails started bouncing with "550 An URL in this email is listed by Spamhaus DBL".
+My own domain was clean. The listed one was the domain inside the tracking links: a shared hosting domain that
+someone else had abused. Moving tracking to a domain of my own fixed it.</p>
+<p>What to do: check every domain your email touches, not just the one you send from. That means links, tracking,
+images and the signature, against Spamhaus and SURBL.</p>
+
+<h2>7. You send cold email from your main domain</h2>
+<p>Even if it works today, it puts everything on one bet. When that domain gets flagged, your invoices, support
+replies and password resets go to spam with it. Send cold email from separate domains in your name, and point
+those domains to your website so anyone who checks them sees a real business.</p>
+
+<h2>8. Last: the copy</h2>
+<p class="stat">Own copy: 21.5% inbox. Neutral copy: 19.0%.</p>
+<p>Same domains, same day, seed-inbox test. Rewriting the email changed nothing, because the problem was never
+the words. Copy matters for replies; for placement it comes after everything above.</p>
+
+<h2>Google Workspace emails going to spam?</h2>
+<p>Everything above applies, plus one trap. Google Postmaster Tools only shows reputation for domains that send
+enough volume. Cold email domains often send too little to show any data, so Postmaster stays silent while
+placement drops. Seed-inbox tests catch it earlier.</p>
+
+<h2>What to do this week</h2>
+<ol>
+  <li>Run your sending domains through the <a href="/email-deliverability-checker/">free checker</a> and fix any
+  red result.</li>
+  <li>Turn off open tracking on every cold campaign.</li>
+  <li>Verify your lists and move catch-all addresses out.</li>
+  <li>Write down the age of every sending domain and plan its replacement.</li>
+  <li>Check every domain inside your links and tracking against Spamhaus and SURBL.</li>
+</ol>
+
+<div class="card">
+  <p><b>Want to know which one it is for you?</b> Send me your sending domain and I'll reply in writing, within one
+  business day, with the first thing I'd fix. Free. If you need the full picture, the
+  <a href="/email-deliverability-audit/">email deliverability audit</a> starts at $350.</p>
+  <p><a class="btn" href="/#contact">Send me your domain</a></p>
+</div>
+</article>
+</main>
+
+<footer><div class="wrap">
+  <p><a href="/email-deliverability-audit/">Email deliverability audit</a> &middot;
+  <a href="/cold-email-agency/">Done-for-you cold email</a> &middot;
+  <a href="/email-deliverability-checker/">Free deliverability checker</a> &middot;
+  <a href="/why-emails-go-to-spam/">Why emails go to spam</a></p>
+  <p>Automatia Agency, sole proprietorship of Alexander Rosales.
+  32 Adirondack Lane, Plattsburgh, NY 12901, United States.<br>
+  <a href="/terms.html">Terms of Service</a> &middot;
+  <a href="/privacy.html">Privacy Policy</a> &middot;
+  <a href="/refunds.html">Refund and Cancellation Policy</a> &middot;
+  <a href="/contact.html">Contact</a></p>
+  <p>&copy; 2026 Alexander Rosales. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

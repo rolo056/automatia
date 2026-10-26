@@ -71,12 +71,36 @@ section{padding:120px 0}
 .eyebrow{display:block;font-size:17px;font-weight:600;color:var(--accent);letter-spacing:-.01em;margin:0 0 10px}
 .title{font-size:clamp(36px,5.2vw,56px);line-height:1.07;margin:0 auto 18px;max-width:18ch;letter-spacing:-.035em}
 .intro{font-size:clamp(19px,1.8vw,21px);line-height:1.4;color:var(--muted);max-width:40ch;margin:0 auto 56px}
-.title,.intro,.hero h1,.statement,.confession,.agency-note{text-wrap:balance}
+.title,.intro,.hero h1:not(.eyebrow),.hero .hero-title,.statement,.confession,.agency-note{text-wrap:balance}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* Portada */
 .hero{padding:104px 0 112px;text-align:center}
-.hero h1{font-size:clamp(46px,8vw,96px);line-height:1.02;letter-spacing:-.045em;margin:0 auto 24px;max-width:12ch}
+/* El h1 de la portada es la linea corta con la palabra clave (clase eyebrow); el titular grande va en .hero-title.
+   La version en espanol sigue usando un h1 grande, por eso el :not(). */
+.hero h1:not(.eyebrow),.hero .hero-title{font-size:clamp(46px,8vw,96px);line-height:1.02;letter-spacing:-.045em;margin:0 auto 24px;max-width:12ch;color:var(--ink);font-weight:700}
+
+/* Paginas de servicio y guia */
+.page-hero{padding:96px 0 24px}
+.page-hero .title{max-width:20ch}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 18px}
+.crumbs a{color:var(--muted)}
+.more{display:inline-block;margin-top:14px;font-weight:500}
+.checklist{max-width:760px;margin:0 auto;text-align:left;padding-left:22px}
+.checklist li{margin:10px 0}
+.checklist b{color:var(--ink)}
+.cta{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+article.guide h2{margin-top:48px}
+article.guide .stat{font-size:21px;color:var(--ink);font-weight:600;letter-spacing:-.02em}
+
+/* Preguntas frecuentes */
+.faq{max-width:760px;margin:0 auto;text-align:left}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:19px;letter-spacing:-.02em;color:var(--ink);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin:12px 0 0}
 .hero .intro{max-width:36ch;margin-bottom:56px}
 
 /* El comprobador, presentado como el producto */

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Email Deliverability Checker | Automatia</title>
+<meta name="description" content="Free email deliverability checker for cold email domains: SPF, DKIM, DMARC and MX in about ten seconds, right in your browser. Nothing is stored.">
+<link rel="canonical" href="https://automatia-agency.com/email-deliverability-checker/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automatia Agency">
+<meta property="og:url" content="https://automatia-agency.com/email-deliverability-checker/">
+<meta property="og:title" content="Free email deliverability checker">
+<meta property="og:description" content="SPF, DKIM, DMARC and MX on your sending domain, in about ten seconds. Nothing is stored.">
+<meta property="og:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free email deliverability checker">
+<meta name="twitter:description" content="SPF, DKIM, DMARC and MX on your sending domain, in about ten seconds.">
+<meta name="twitter:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebApplication","name":"Email deliverability checker","url":"https://automatia-agency.com/email-deliverability-checker/",
+  "applicationCategory":"BusinessApplication","operatingSystem":"Any (runs in the browser)",
+  "description":"Checks SPF, DKIM, DMARC and MX on a sending domain from its public DNS, in the browser.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "provider":{"@type":"ProfessionalService","@id":"https://automatia-agency.com/#business","name":"Automatia Agency"}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://automatia-agency.com/"},
+  {"@type":"ListItem","position":2,"name":"Email deliverability checker","item":"https://automatia-agency.com/email-deliverability-checker/"}]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Is the checker free?","acceptedAnswer":{"@type":"Answer","text":"Yes. No sign-up and no email address needed."}},
+  {"@type":"Question","name":"Is my domain stored?","acceptedAnswer":{"@type":"Answer","text":"No. The check runs in your browser and only the domain name is sent to Google Public DNS to read its public records. Nothing reaches me unless you choose to email the result."}},
+  {"@type":"Question","name":"If everything passes, why is my cold email still in spam?","acceptedAnswer":{"@type":"Answer","text":"Because authentication is only the first gate. Worn-out domains, bounces, volume per inbox and the tracking pixel can still send you to spam with a perfect setup. That is what the audit looks at."}}]}]}
+</script>
+<script data-goatcounter="https://stats.automatia-agency.com/count" async src="https://stats.automatia-agency.com/count.js"></script>
+</head>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><div class="bar">
+  <a class="brand" href="/">Automatia<span>&nbsp;Agency</span></a>
+  <nav aria-label="Main">
+    <a href="/email-deliverability-checker/" aria-current="page">Free check</a>
+    <a href="/email-deliverability-audit/">Audit</a>
+    <a href="/cold-email-agency/">Done for you</a>
+    <a href="/why-emails-go-to-spam/">Spam guide</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</div></div></header>
+
+<main id="main">
+
+<section class="page-hero center" aria-labelledby="page-title">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Email deliverability checker</p>
+    <h1 class="title" id="page-title">Free email deliverability checker</h1>
+    <p class="intro">SPF, DKIM, DMARC and MX on your sending domain, in about ten seconds. It runs in your browser,
+    and nothing is stored.</p>
+    <div class="checker">
+      <form id="check-form" novalidate>
+        <label class="check-label" for="domain">Your sending domain</label>
+        <div class="check-row">
+          <input id="domain" name="domain" type="text" inputmode="url" autocomplete="off"
+                 spellcheck="false" placeholder="yourcompany.com" aria-describedby="check-note">
+          <button class="btn" id="check-btn" type="submit">Check it free</button>
+        </div>
+        <p class="check-note" id="check-note">Reads your public DNS right in your browser. Nothing is stored, and nothing reaches me unless you send it.</p>
+      </form>
+      <div class="result" id="result" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="gray center" aria-labelledby="what-title">
+  <div class="wrap">
+    <span class="eyebrow">What it checks</span>
+    <h2 class="title" id="what-title">The four records every cold email domain needs.</h2>
+    <ul class="checklist">
+      <li><b>SPF.</b> Whether there is exactly one record, whether it stays under the 10 DNS lookups allowed, and
+      whether it ends in "+all", which would let any server send as you.</li>
+      <li><b>DKIM.</b> Whether a signing key is published at the common selectors used by Google Workspace,
+      Microsoft 365 and the usual sending tools.</li>
+      <li><b>DMARC.</b> Your policy (none, quarantine or reject) and whether reports are being sent anywhere.</li>
+      <li><b>MX.</b> Whether the domain can receive replies at all.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="center" aria-labelledby="cant-title">
+  <div class="wrap">
+    <span class="eyebrow">What it can't see</span>
+    <h2 class="title" id="cant-title">A clean result doesn't mean the inbox.</h2>
+    <p class="intro">In one audit, all 67 sending domains passed every check above, and the mail still went to spam.
+    Domain age, bounces, volume per inbox and the tracking pixel decide the rest.</p>
+    <div class="cta">
+      <a class="btn" href="/email-deliverability-audit/">See what the audit adds</a>
+      <a class="btn btn-ghost" href="/why-emails-go-to-spam/">Why emails go to spam</a>
+    </div>
+  </div>
+</section>
+
+<section class="gray center" aria-labelledby="faq-title">
+  <div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2 class="title" id="faq-title">About the checker.</h2>
+    <div class="faq">
+      <details><summary>Is the checker free?</summary>
+        <p>Yes. No sign-up and no email address needed.</p></details>
+      <details><summary>Is my domain stored?</summary>
+        <p>No. The check runs in your browser and only the domain name is sent to Google Public DNS to read its public records. Nothing reaches me unless you choose to email the result.</p></details>
+      <details><summary>If everything passes, why is my cold email still in spam?</summary>
+        <p>Because authentication is only the first gate. Worn-out domains, bounces, volume per inbox and the tracking pixel can still send you to spam with a perfect setup. That is what the <a href="/email-deliverability-audit/">audit</a> looks at.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <p><a href="/email-deliverability-audit/">Email deliverability audit</a> &middot;
+  <a href="/cold-email-agency/">Done-for-you cold email</a> &middot;
+  <a href="/email-deliverability-checker/">Free deliverability checker</a> &middot;
+  <a href="/why-emails-go-to-spam/">Why emails go to spam</a></p>
+  <p>Automatia Agency, sole proprietorship of Alexander Rosales.
+  32 Adirondack Lane, Plattsburgh, NY 12901, United States.<br>
+  <a href="/terms.html">Terms of Service</a> &middot;
+  <a href="/privacy.html">Privacy Policy</a> &middot;
+  <a href="/refunds.html">Refund and Cancellation Policy</a> &middot;
+  <a href="/contact.html">Contact</a></p>
+  <p>&copy; 2026 Alexander Rosales. All rights reserved.</p>
+</div></footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
