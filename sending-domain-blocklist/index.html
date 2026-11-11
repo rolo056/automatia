@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sending Domain on a Blocklist? Check and Fix | Automatia</title>
+<meta name="description" content="What it means when a cold email sending domain is on SURBL or Spamhaus DBL, how to check yours, and how to get it removed. With measured numbers.">
+<link rel="canonical" href="https://automatia-agency.com/sending-domain-blocklist/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Automatia Agency">
+<meta property="og:url" content="https://automatia-agency.com/sending-domain-blocklist/">
+<meta property="og:title" content="Sending domain on a blocklist? How to check and fix it">
+<meta property="og:description" content="Of 356 cold email sending domains I checked, 130 were on SURBL or Spamhaus DBL. What that does to your email and how to get off the list.">
+<meta property="og:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sending domain on a blocklist? How to check and fix it">
+<meta name="twitter:description" content="What SURBL and Spamhaus DBL do to cold email, how to check your domains, and how to get removed.">
+<meta name="twitter:image" content="https://automatia-agency.com/assets/og.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Article","headline":"Sending domain on a blocklist? How to check and fix it",
+  "description":"What it means when a cold email sending domain is on SURBL or Spamhaus DBL, how to check it, and how to get it removed.",
+  "url":"https://automatia-agency.com/sending-domain-blocklist/","image":"https://automatia-agency.com/assets/og.png",
+  "datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"en",
+  "author":{"@type":"Person","name":"Alexander Rosales","url":"https://automatia-agency.com/"},
+  "publisher":{"@type":"Organization","@id":"https://automatia-agency.com/#business","name":"Automatia Agency"}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://automatia-agency.com/"},
+  {"@type":"ListItem","position":2,"name":"Sending domain on a blocklist","item":"https://automatia-agency.com/sending-domain-blocklist/"}]}]}
+</script>
+<script data-goatcounter="https://stats.automatia-agency.com/count" async src="https://stats.automatia-agency.com/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><div class="bar">
+  <a class="brand" href="/">Automatia<span>&nbsp;Agency</span></a>
+  <nav aria-label="Main">
+    <a href="/email-deliverability-checker/">Free check</a>
+    <a href="/email-deliverability-audit/">Audit</a>
+    <a href="/cold-email-agency/">Done for you</a>
+    <a href="/why-emails-go-to-spam/">Spam guide</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</div></div></header>
+
+<main id="main" class="wrap">
+<article class="guide">
+<p class="crumbs"><a href="/">Home</a> &rsaquo; Sending domain on a blocklist</p>
+<h1>Is your sending domain on a blocklist?</h1>
+<p class="small">By Alexander Rosales &middot; Updated 10 November 2026</p>
+
+<p class="lede">In November 2026 I checked 356 sending domains used for cold email. 130 of them, 36%, were on
+SURBL or Spamhaus DBL. Most of their owners didn't know. Here is what a listing does to your email, how to check
+your own domains, and how to get one removed.</p>
+
+<h2>What a domain blocklist is</h2>
+<p>SURBL and the Spamhaus Domain Blocklist (DBL) are lists of domains, not of servers. A domain lands on them when
+it shows up in mail that people or spam traps report as unwanted.</p>
+<p>Spam filters look up every domain they find in a message: the address you send from, the links in the body,
+the tracking domain behind them, the domain in your signature. One listed domain is enough to push the whole email
+toward spam.</p>
+
+<h2>A listing follows the domain wherever it's written</h2>
+<p>I learned this on my own mail. I wrote to 1,012 companies about their sending domains. In 128 of those emails I
+named a domain of theirs that was on a blocklist. Two of those recipients wrote back to say my email had landed in
+their spam folder, one on Zoho and one on Google Workspace. None of the other 884 said so.</p>
+<p>Two cases is a small number, and I treat it as one. But it matches how these lists work: the filter doesn't
+care who wrote the domain, only that it's there. So a listed domain hurts replies, forwards, and any email from a
+clean domain that links to it or mentions it.</p>
+
+<h2>How to check your sending domains</h2>
+<ol>
+  <li>Write down every domain you send from, plus your tracking domain and any domain in your links or
+  signature.</li>
+  <li>Look each one up on the lists' own pages:
+  <a href="https://www.surbl.org/surbl-analysis" rel="noopener">SURBL's lookup</a> and
+  <a href="https://check.spamhaus.org/" rel="noopener">Spamhaus's checker</a>. Both are free.</li>
+  <li>Check again a week later. A domain that is clean today can be listed after one bad campaign.</li>
+</ol>
+<p>Authentication is a separate question. A domain can pass SPF, DKIM and DMARC and still be listed. The
+<a href="/email-deliverability-checker/">free checker</a> on this site covers authentication; the lookups above
+cover the lists.</p>
+
+<h2>What to do when one is listed</h2>
+<ol>
+  <li><b>Stop sending from it today.</b> Take its inboxes out of every campaign. Each new email extends the
+  listing.</li>
+  <li><b>Find out why.</b> The usual causes are bounces from an unverified list, too many emails per inbox per
+  day, or spam complaints from a campaign that reached the wrong people.</li>
+  <li><b>Ask for removal on the list's own page.</b> SURBL and Spamhaus both have a removal request next to the
+  lookup result. Neither one charges for it. Anyone who asks you to pay for delisting is not the list.</li>
+  <li><b>Move the campaign to a backup domain that is already warm.</b> If you don't have one, your outreach
+  stops for the two to three weeks a new domain needs.</li>
+  <li><b>Keep the listed domain out of your other mail.</b> Not in a signature, not in a link, not in a
+  redirect, until it is off the list.</li>
+</ol>
+
+<h2>How to avoid the next listing</h2>
+<ul>
+  <li>Verify every list and leave catch-all addresses out. In my own campaigns they bounced at 4.19%, against
+  1.09% for verified addresses.</li>
+  <li>Keep the volume per inbox low and steady.</li>
+  <li>Always have one or two backup domains warming, so a listing costs you a day and not three weeks.</li>
+  <li>Write down the age of each domain. In one audit, sending domains lasted two to three months before they
+  started burning.</li>
+</ul>
+
+<div class="card">
+  <p><b>Want me to check yours?</b> Send me your sending domains and I'll check them against both lists and reply
+  in writing within one business day. Free. If you run ten domains or more, tell me how many and I'll include a
+  rotation plan.</p>
+  <p><a class="btn" href="/#contact">Send me your domains</a></p>
+</div>
+</article>
+</main>
+
+<footer><div class="wrap">
+  <p><a href="/email-deliverability-audit/">Email deliverability audit</a> &middot;
+  <a href="/cold-email-agency/">Done-for-you cold email</a> &middot;
+  <a href="/email-deliverability-checker/">Free deliverability checker</a> &middot;
+  <a href="/why-emails-go-to-spam/">Why emails go to spam</a> &middot;
+  <a href="/sending-domain-blocklist/">Sending domain on a blocklist</a></p>
+  <p>Automatia Agency, sole proprietorship of Alexander Rosales.
+  32 Adirondack Lane, Plattsburgh, NY 12901, United States.<br>
+  <a href="/terms.html">Terms of Service</a> &middot;
+  <a href="/privacy.html">Privacy Policy</a> &middot;
+  <a href="/refunds.html">Refund and Cancellation Policy</a> &middot;
+  <a href="/contact.html">Contact</a></p>
+  <p>&copy; 2026 Alexander Rosales. All rights reserved.</p>
+</div></footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

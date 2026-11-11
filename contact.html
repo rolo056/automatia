@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact — Automatia Agency</title>
 <meta name="description" content="Contact details for Automatia Agency, sole proprietorship of Alexander Rosales, Plattsburgh, New York.">
+<link rel="canonical" href="https://automatia-agency.com/contact.html">
 <link rel="stylesheet" href="style.css">
 <script data-goatcounter="https://stats.automatia-agency.com/count" async src="https://stats.automatia-agency.com/count.js"></script>
 </head>
@@ -35,6 +36,31 @@ one business day, Monday to Friday.</p>
 </dl>
 </div>
 
+<h2 id="write">Write to me here</h2>
+<form class="form-card" id="contact-form" novalidate>
+      <p class="lead">Tell me what you need.</p>
+      <p class="sub">You'll get a written answer within one business day.</p>
+      <div class="fgrid">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" maxlength="100"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+        <div class="field"><label for="f-domain">Your sending domain</label><input id="f-domain" name="domain" inputmode="url" maxlength="200" placeholder="yourcompany.com"></div>
+        <div class="field"><label for="f-need">What do you need?</label>
+          <select id="f-need" name="need">
+            <option value="audit">A deliverability audit</option>
+            <option value="done">Campaigns done for me</option>
+            <option value="setup">Setup for my team</option>
+            <option value="other">Not sure yet</option>
+          </select></div>
+        <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="4000" required placeholder="What you send today, with what tool, and what's going wrong."></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <div class="form-foot">
+        <button class="btn" type="submit">Send</button>
+        <span class="f-status" id="f-status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="alt-mail">Prefer email? <a href="mailto:alexander@automatia-agency.com">alexander@automatia-agency.com</a></p>
+    </form>
+
 <h2>What to include in your message</h2>
 <p>To get a useful answer on the first reply, describe what you need, what you are using today,
 and the date by which it has to work. A written quote is sent before any work begins.</p>
@@ -55,5 +81,6 @@ in writing within ten business days.</p>
   <a href="/contact.html">Contact</a></p>
   <p>&copy; 2026 Alexander Rosales. All rights reserved.</p>
 </div></footer>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
